@@ -1,0 +1,25 @@
+﻿@model WebSucamec.Models.LicenciasPorTramitarModel
+
+@{
+    ViewBag.Title = "LicenciasPorTramitar";
+}
+
+<h2>LicenciasPorTramitar</h2>
+
+<table>
+
+@foreach (
+    Entidades.EntidadTramite lista in Model.LicenciasPorTramitar
+
+    )
+{
+    <tr>
+        <td>@lista.CodTramite</td>
+        <td>@lista.CodCiudadano</td>
+        <td>@lista.NombreCiudadano</td>
+        <td>@lista.ApellidoPaternoCiudadano</td>
+        <td>@lista.ApellidoMaternoCiudadano</td>
+        <td>@lista.DNICiudadano</td>
+    </tr>
+}
+</table>
